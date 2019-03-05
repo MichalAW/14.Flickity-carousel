@@ -1,20 +1,8 @@
-$background-cell-color: #8C8;
-$white-color: #FFFFFF;
-
 /* external css: flickity.css */
 
 * { box-sizing: border-box; }
 
 body { font-family: sans-serif; }
-
-/* prevent vertical scroll bar glitch */
-html { overflow-y: scroll; }
-
-.container {
-  text-align: center;
-  margin: 0 auto;
-  background-size: cover;
-}
 
 .carousel {
   background: #EEE;
@@ -24,9 +12,10 @@ html { overflow-y: scroll; }
   width: 100%;
   height: 200px;
   margin-right: 10px;
-  background: $background-cell-color;
+  background: #8C8;
   border-radius: 5px;
   counter-increment: gallery-cell;
+  background-size: cover;
 }
 
 /* cell number */
@@ -37,5 +26,11 @@ html { overflow-y: scroll; }
   line-height: 200px;
   font-size: 80px;
   height: 50%;
-  color: $white-color;
+  height: 250px;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  position: relative;
 }
