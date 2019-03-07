@@ -5,6 +5,7 @@ $background-color: #F0F8FF;
 $font-sans-serif: sans-serif;
 $progres-background: #5F9EA0;
 $background-color-vision: #00FFFF;
+$shadow-color: #A52A2A;
 
 * { box-sizing: border-box; }
 
@@ -34,7 +35,7 @@ body {
   align-items: center;
   font-size: 80px;
   color: $white-color;
-  text-shadow: 1px 1px;
+  text-shadow: 2px 2px 5px  $shadow-color;
 }
 
 h1 {
@@ -53,7 +54,6 @@ h1 {
 
 /* cell number */
 .carousel-cell:before {
-  display: inline-block;
   text-align: center;
   content: counter(gallery-cell);
   line-height: 200px;
@@ -64,7 +64,6 @@ h1 {
 .container {
   max-width: 1200px;
   text-align: center;
-  display: block;
 }
 
 .btn {

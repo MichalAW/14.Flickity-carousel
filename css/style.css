@@ -27,7 +27,7 @@ body {
   align-items: center;
   font-size: 80px;
   color: #FFFFFF;
-  text-shadow: 1px 1px;
+  text-shadow: 2px 2px 5px #A52A2A;
 }
 
 h1 {
@@ -46,7 +46,6 @@ h1 {
 
 /* cell number */
 .carousel-cell:before {
-  display: inline-block;
   text-align: center;
   content: counter(gallery-cell);
   line-height: 200px;
@@ -57,7 +56,6 @@ h1 {
 .container {
   max-width: 1200px;
   text-align: center;
-  display: block;
 }
 
 .btn {
