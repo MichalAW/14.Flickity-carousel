@@ -8,7 +8,10 @@ var flkty = new Flickity( elem, {
 	hash: true,
 });
 
-var flkty = new Flickity('.carousel');
+var nextButton = document.querySelector('.button-next');
+nextButton.addEventListener( 'click', function() {
+  flkty.next();
+});
 
 var previousButton = document.querySelector('.button-previous');
 previousButton.addEventListener( 'click', function() {

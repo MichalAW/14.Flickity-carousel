@@ -5,6 +5,9 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Flickity-carousel by Wanta Michał</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-  UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" href="./vendor/normalize.css" media="screen">
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -13,35 +16,37 @@
 	<h1>Flickity - freeScroll</h1>
 	<div class="carousel">
 		<div style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/be/Las_Widok_5.JPG');" class="carousel-cell" id="carousel-cell1">
-			<div class="container">-page</div>
+			<div class="container">page</div>
 		</div>
 		<div style="background-image: url('http://navtur.pl/files/plc_pano/4557.jpg');" class="carousel-cell" id="carousel-cell2">
-			<div class="container">-page</div>
+			<div class="container">page</div>
 		</div>
 		<div style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Las_mlocinski.jpg/240px-Las_mlocinski.jpg');" class="carousel-cell" id="carousel-cell3">
-			<div class="container">-page</div>
+			<div class="container">page</div>
 		</div>
 		<div style="background-image: url('https://i.imged.pl/obraz-las-zima-piowart.jpg');" class="carousel-cell" id="carousel-cell4">
-			<div class="container">-page</div>
+			<div class="container">page</div>
 		</div>
 		<div style="background-image: url('https://www.tapeciarnia.pl/tapety/normalne/246355_jez_liscie_drzewo_las_jesien.jpg');" class="carousel-cell" id="carousel-cell5">
-			<div class="container">-page</div>
+			<div class="container">page</div>
 		</div>
 	</div>
 	<div class="progress-bar"></div>
+	<div class="btn">
+		<button class="button button-previous">Previous</button>
+		<button class="button button-next">Next</button>
+	</div>
 	<div>
 		<h1>Flickity - hash</h1>
-		<p>
-		  View:
-		  <a href="#carousel-cell1">Cell 1</a>,
-		  <a href="#carousel-cell2">Cell 2</a>,
-		  <a href="#carousel-cell3">Cell 3</a>,
-		  <a href="#carousel-cell4">Cell 4</a>,
-		  <a href="#carousel-cell5">Cell 5</a>
-		</p>
-	</div>
-	<div class="btn">
-		<button class="button button-previous">previous</button>
+		<div class="view">
+			<p>View:
+				<a href="#carousel-cell1">Cell 1</a>,
+				<a href="#carousel-cell2">Cell 2</a>,
+				<a href="#carousel-cell3">Cell 3</a>,
+				<a href="#carousel-cell4">Cell 4</a>,
+				<a href="#carousel-cell5">Cell 5</a>
+			</p>
+		</div>
 	</div>
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	<script src="https://unpkg.com/flickity-hash@1/hash.js"></script>

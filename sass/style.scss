@@ -1,10 +1,17 @@
 $background-color: #8C8;
 $white-color: #FFFFFF;
-/* external css: flickity.css */
+$border-color:  #000000;
+$background-color: #F0F8FF;
+$font-sans-serif: sans-serif;
+$progres-background: #5F9EA0;
+$background-color-vision: #00FFFF;
 
 * { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
+body { 
+  font-family: $font-sans-serif; 
+  background-color: $background-color;
+}
 
 .carousel {
   background: #EEE;
@@ -27,11 +34,26 @@ body { font-family: sans-serif; }
   align-items: center;
   font-size: 80px;
   color: $white-color;
+  text-shadow: 1px 1px;
+}
+
+h1 {
+  text-align: center;
+  border-bottom: solid $border-color ;
+}
+
+.view a {
+  text-decoration: none;
+  border: 1px solid grey;
+  border-radius: 6px;
+  padding: 4px;
+  color: $border-color;
+  background-color: $background-color-vision;
 }
 
 /* cell number */
 .carousel-cell:before {
-  display: block;
+  display: inline-block;
   text-align: center;
   content: counter(gallery-cell);
   line-height: 200px;
@@ -46,9 +68,27 @@ body { font-family: sans-serif; }
 }
 
 .btn {
-  position: absolute;
+  padding: 10px;
 }
 
 .button {
   font-size: 22px;
+  background-color: $background-color;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background-color: $progres-background;
+}
+
+@media(max-width: 767px) {
+  /*small devices*/
+  .container {
+    font-size: 40px;
+  }
+
+  .carousel-cell:before {
+    font-size: 50px;
+  }
 }
