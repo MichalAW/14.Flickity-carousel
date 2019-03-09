@@ -45,7 +45,7 @@ flkty.on( 'scroll', function( progress ) {
 
 //google map function
 // Initialize and add the map
-function initMap() {
+window.initMap = function() {
   // The location of Uluru
   var uluru = {lat: -25.344, lng: 131.036};
   // The map, centered at Uluru
