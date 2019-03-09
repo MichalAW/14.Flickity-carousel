@@ -13,7 +13,7 @@ body {
   font-family: $font-sans-serif; 
   background-color: $background-color;
 }
-
+/*styles for carousel-cell*/
 .carousel {
   background: #EEE;
 }
@@ -79,6 +79,13 @@ h1 {
   height: 20px;
   width: 0;
   background-color: $progres-background;
+}
+
+/*google map*/
+.map-style {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
 }
 
 @media(max-width: 767px) {
