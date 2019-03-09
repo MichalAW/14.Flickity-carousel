@@ -2,9 +2,9 @@
 var templateList = document.getElementById('template-slider').innerHTML;
 var templateItem = document.getElementById('template-slider-item').innerHTML;
 
-// Następnie zoptymalizujemy drugą z nich, ponieważ tylko ona będzie wykonywana wielokrotnie.
+// Optimaize the second one, becouse it it will be performed repeatedly.
 Mustache.parse(templateItem);
-// Teraz stworzymy zmienną, w której chcemy mieć kod HTML wszystkich produktów.
+// Now we will create a variable in which we want to have the HTML code of all products.
 var listItems = '';
 
 for(var i = 0; i < data.length; i++){
@@ -18,7 +18,7 @@ results.insertAdjacentHTML('beforeend', fullProductList);
 
 var elem = document.querySelector('.carousel');
 var flkty = new Flickity( elem, {
-  // options
+  // our options
  	cellAlign: 'left',
  	contain: true,
   	prevNextButtons: false,
