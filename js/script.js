@@ -21,7 +21,7 @@ var flkty = new Flickity( elem, {
   // our options
  	cellAlign: 'left',
  	contain: true,
-  	prevNextButtons: false,
+  prevNextButtons: false,
 	pageDots: false,
 	hash: true,
 });
@@ -57,12 +57,17 @@ flkty.on( 'scroll', function( progress ) {
       center: initCoords
     });
     
-    for (var i=0; i < data.length;i++) {
-        new google.maps.Marker({
+   for (var i=0; i < data.length;i++) {
+    google.maps.event.addListener(
+      new google.maps.Marker({
         position: data[i]['coords'],
         map: map
-      });
-    }
+      }), 'click', function() {
+        window.location.hash = "#carousel-cell" + (i+1);
+        console.log("#carousel-cell" + (i+1))
+        // flkty.select(i);
+    });
+  }
 
     document.getElementById('center-map').addEventListener('click', function(event){
       event.preventDefault();
