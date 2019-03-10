@@ -11,8 +11,8 @@ for(var i = 0; i < data.length; i++){
 	listItems += Mustache.render(templateItem, data[i]);
 }
 
-var fullProductList = Mustache.render(templateList, {slider: listItems});
-results.insertAdjacentHTML('beforeend', fullProductList);
+var fullList = Mustache.render(templateList, {slider: listItems});
+results.insertAdjacentHTML('beforeend', fullList);
 
 //////////////
 
