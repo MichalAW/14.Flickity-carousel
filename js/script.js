@@ -1,13 +1,8 @@
-// rendering the html with a mustache
-mustacheRender();
-
-// variables to the fltor slider - globally, because used in the flktSlider () and initMap () functions
 var elem = document.querySelector('.carousel');
 var flkty = new Flickity(elem, {
-  // options
   cellAlign: 'left',
   contain: true,
-    prevNextButtons: false,
+  prevNextButtons: false,
   pageDots: false,
   hash: true,
 });
@@ -16,9 +11,7 @@ function mustacheRender() {
   var templateList = document.getElementById('template-slider').innerHTML;
   var templateItem = document.getElementById('template-slider-item').innerHTML;
 
-  // Then we will optimize the second one, because only it will be performed repeatedly.
   Mustache.parse(templateItem);
-  // Now we will create a variable in which we want to have the HTML code of all products.
   var listItems = '';
 
   for(var i = 0; i < data.length; i++){
@@ -48,4 +41,5 @@ function flktySlider() {
   });
 }
 
+mustacheRender();
 flktySlider();
