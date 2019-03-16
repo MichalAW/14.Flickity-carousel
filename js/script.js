@@ -35,13 +35,14 @@ var data = [
     coords: {lat: -27.363, lng: 111.044}
   }
 ];
-// wyrenderowanie html za pomocą mustache
+// wyrenederowanie HTML za pomocą mustache, aby móc operować na elementach html slidera.
 mustacheRender();
 
-// zmienne do slidera flkty - globalnie, bo używane w funkcji flktySlider() i initMap()
 var elem = document.querySelector('.carousel');
+var nextButton = document.querySelector('.button-next');
+var previousButton = document.querySelector('.button-previous');
+var progressBar = document.querySelector('.progress-bar');
 var flkty = new Flickity(elem, {
-  // options
   cellAlign: 'left',
   contain: true,
   prevNextButtons: false,
@@ -52,9 +53,8 @@ var flkty = new Flickity(elem, {
 function mustacheRender() {
   var templateList = document.getElementById('template-slider').innerHTML;
   var templateItem = document.getElementById('template-slider-item').innerHTML;
-  // Następnie zoptymalizujemy drugą z nich, ponieważ tylko ona będzie wykonywana wielokrotnie.
+
   Mustache.parse(templateItem);
-  // Teraz stworzymy zmienną, w której chcemy mieć kod HTML wszystkich produktów.
   var listItems = '';
 
   for(var i = 0; i < data.length; i++){
@@ -66,17 +66,13 @@ function mustacheRender() {
 }
 
 function flktySlider() {
-  var nextButton = document.querySelector('.button-next');
   nextButton.addEventListener('click', function() {
     flkty.next();
   });
 
-  var previousButton = document.querySelector('.button-previous');
   previousButton.addEventListener('click', function() {
     flkty.previous();
   });
-
-  var progressBar = document.querySelector('.progress-bar')
 
   flkty.on( 'scroll', function( progress ) {
     progress = Math.max( 0, Math.min( 1, progress ) );
@@ -85,7 +81,6 @@ function flktySlider() {
 }
 
 function initMap() {
-  // współrzędne z pierwszego slajdu
   var initCoords = data[0]['coords'];
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 7,
@@ -105,7 +100,6 @@ function initMap() {
     })(i);
   }
 
-  // Następnie dodajemy akcję do guzika, dokładnie tak samo jak robiliśmy to w poprzednim module.
   document.getElementById('center-map').addEventListener('click', function(event){
     event.preventDefault();
     map.panTo(initCoords);
@@ -118,13 +112,11 @@ function initMap() {
   });
 
   flkty.on( 'change', function(index) {
-      console.log(index);
     smoothPanAndZoom(map, 3, data[index].coords);
   });
 } 
 
-var smoothPanAndZoom = function(map, zoom, coords){
-// Trochę obliczeń, aby wyliczyć odpowiedni zoom do którego ma oddalić się mapa na początku animacji.
+function smoothPanAndZoom (map, zoom, coords){
   var jumpZoom = zoom - Math.abs(map.getZoom() - zoom);
   jumpZoom = Math.min(jumpZoom, zoom -1);
   jumpZoom = Math.max(jumpZoom, 3);
@@ -136,7 +128,7 @@ var smoothPanAndZoom = function(map, zoom, coords){
   });
 };
 
-var smoothZoom = function(map, zoom, callback) {
+function smoothZoom (map, zoom, callback) {
   var startingZoom = map.getZoom();
   var steps = Math.abs(startingZoom - zoom);
 
@@ -160,14 +152,11 @@ var smoothZoom = function(map, zoom, callback) {
   }, 80);
 };
 
-// Poniższa funkcja działa bardzo podobnie do smoothZoom. Spróbuj samodzielnie ją przeanalizować. 
-var smoothPan = function(map, coords, callback) {
+function smoothPan (map, coords, callback) {
   var mapCenter = map.getCenter();
   coords = new google.maps.LatLng(coords);
-
   var steps = 12;
   var panStep = {lat: (coords.lat() - mapCenter.lat()) / steps, lng: (coords.lng() - mapCenter.lng()) / steps};
-
   var i = 0;
   var timer = window.setInterval(function(){
     if(++i >= steps) {
