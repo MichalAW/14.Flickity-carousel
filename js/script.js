@@ -16,7 +16,6 @@ function mustacheRender() {
 
 function flktySlider() {
   var elem = document.querySelector('.carousel');
-  console.log(elem);
   var flkty = new Flickity(elem, {
     cellAlign: 'left',
     contain: true,
