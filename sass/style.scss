@@ -12,8 +12,10 @@ $shadow-color: #A52A2A;
 body { 
   font-family: $font-sans-serif; 
   background-color: $background-color;
+  padding: 10px;
+  text-align: center;
 }
-
+/*styles for carousel-cell*/
 .carousel {
   background: #EEE;
 }
@@ -79,6 +81,28 @@ h1 {
   height: 20px;
   width: 0;
   background-color: $progres-background;
+}
+
+/*google map*/
+.map-style {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}
+
+body {
+  padding: 10px;
+  text-align: center;
+}
+
+.container-map {
+  max-width: 400px; 
+  margin: 0 auto;
+}
+
+.map {
+  height: 200px;
+  width: 100%;
 }
 
 @media(max-width: 767px) {
