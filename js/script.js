@@ -35,7 +35,7 @@ var data = [
     coords: {lat: -27.363, lng: 111.044}
   }
 ];
-// wyrenederowanie HTML za pomocą mustache, aby móc operować na elementach html slidera.
+// HTML mustache using the mustache to be able to manipulate the slider's html elements.
 mustacheRender();
 
 var elem = document.querySelector('.carousel');
