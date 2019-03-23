@@ -4,14 +4,14 @@ var data = [
     title: 'Title 1',
     description: 'My description 1',
     numb: 1,
-    coords: {lat: -25.363, lng: 131.044}
+    coords: {lat: 40.363, lng: 88.044}
   },
   {
     image: 'http://navtur.pl/files/plc_pano/4557.jpg',
     title: 'Title 2',
     description: 'My description 2',
     numb: 2,
-    coords: {lat: -20.363, lng: 111.044}
+    coords: {lat: 13.363, lng: 26.044}
   },
   {
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Las_mlocinski.jpg/240px-Las_mlocinski.jpg',
@@ -25,14 +25,14 @@ var data = [
     title: 'Title 4',
     description: 'My description 4',
     numb: 4,
-    coords: {lat: -13.363, lng: 141.044}
+    coords: {lat: -79.363, lng: 171.044}
   },
   {
     image: 'https://www.tapeciarnia.pl/tapety/normalne/246355_jez_liscie_drzewo_las_jesien.jpg',
     title: 'Title 5',
     description: 'My description 5',
     numb: 5,
-    coords: {lat: -27.363, lng: 111.044}
+    coords: {lat: 66.363, lng: 111.044}
   }
 ];
 // HTML mustache using the mustache to be able to manipulate the slider's html elements.
