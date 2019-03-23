@@ -1,5 +1,5 @@
 {
-  "name": "Flickity-carousel",
+  "name": "14.Flickity-carousel",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -21,15 +21,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MichalAW/Flickity-carousel.git"
+    "url": "https://github.com/MichalAW/14.Flickity-carousel.git"
   },
   "keywords": [],
   "author": "MichalAW michal.wanta@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MichalAW/Flickity-carousel/issues"
+    "url": "https://github.com/MichalAW/14.Flickity-carousel/issues"
   },
-  "homepage": "https://github.com/MichalAW/Flickity-carousel#readme",
+  "homepage": "https://github.com/MichalAW/14.Flickity-carousel#readme",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.3",
