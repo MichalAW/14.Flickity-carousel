@@ -1,36 +1,36 @@
 var data = [
   {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/b/be/Las_Widok_5.JPG',
-    title: 'Title 1',
-    description: 'My description 1',
+    image: 'http://stohistorii.pl/wp-content/uploads/2016/09/chiny-wielkimur-cover-1920x1278.jpg',
+    title: 'China',
+    description: 'First page',
     numb: 1,
     coords: {lat: 40.363, lng: 88.044}
   },
   {
-    image: 'http://navtur.pl/files/plc_pano/4557.jpg',
-    title: 'Title 2',
-    description: 'My description 2',
+    image: 'https://st2.depositphotos.com/1209102/7936/i/950/depositphotos_79369946-stock-photo-desert-landscape-in-sudan.jpg',
+    title: 'Sudan',
+    description: 'Second page',
     numb: 2,
     coords: {lat: 13.363, lng: 26.044}
   },
   {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Las_mlocinski.jpg/240px-Las_mlocinski.jpg',
-    title: 'Title 3',
-    description: 'My description 3',
+    image: 'https://img.joemonster.org/i/2016/12/kangur_facts01.jpg',
+    title: 'Australia',
+    description: 'Third page',
     numb: 3,
     coords: {lat: -15.363, lng: 118.044}
   },
   {
-    image: 'https://i.imged.pl/obraz-las-zima-piowart.jpg',
-    title: 'Title 4',
-    description: 'My description 4',
+    image: 'https://st3.depositphotos.com/1011872/15252/v/600/depositphotos_152522886-stock-video-mountain-view-in-antarctica.jpg',
+    title: 'Antarctica',
+    description: 'Fourth page',
     numb: 4,
     coords: {lat: -79.363, lng: 171.044}
   },
   {
-    image: 'https://www.tapeciarnia.pl/tapety/normalne/246355_jez_liscie_drzewo_las_jesien.jpg',
-    title: 'Title 5',
-    description: 'My description 5',
+    image: 'https://c1.staticflickr.com/1/951/27134366667_f5ab585600_b.jpg',
+    title: 'Russia',
+    description: 'Fifth page',
     numb: 5,
     coords: {lat: 66.363, lng: 111.044}
   }
