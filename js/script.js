@@ -42,7 +42,6 @@ var elem = document.querySelector('.carousel');
 var nextButton = document.querySelector('.button-next');
 var previousButton = document.querySelector('.button-previous');
 var progressBar = document.querySelector('.progress-bar');
-var numberOfData = data.length;
 var flkty = new Flickity(elem, {
   cellAlign: 'left',
   contain: true,
@@ -54,6 +53,7 @@ var flkty = new Flickity(elem, {
 function mustacheRender() {
   var templateList = document.getElementById('template-slider').innerHTML;
   var templateItem = document.getElementById('template-slider-item').innerHTML;
+  var numberOfData = data.length;
 
   Mustache.parse(templateItem);
   var listItems = '';
