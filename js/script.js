@@ -1,40 +1,41 @@
 var data = [
   {
-    image: 'http://stohistorii.pl/wp-content/uploads/2016/09/chiny-wielkimur-cover-1920x1278.jpg',
+    image:  '../images/china.jpg',
     title: 'China',
     description: 'First page',
     numb: 1,
     coords: {lat: 40.363, lng: 88.044}
   },
   {
-    image: 'https://st2.depositphotos.com/1209102/7936/i/950/depositphotos_79369946-stock-photo-desert-landscape-in-sudan.jpg',
+    image: '../images/sudan.jpg',
     title: 'Sudan',
     description: 'Second page',
     numb: 2,
     coords: {lat: 13.363, lng: 26.044}
   },
   {
-    image: 'https://img.joemonster.org/i/2016/12/kangur_facts01.jpg',
+    image: '../images/kanguru.jpg',
     title: 'Australia',
     description: 'Third page',
     numb: 3,
     coords: {lat: -15.363, lng: 118.044}
   },
   {
-    image: 'https://st3.depositphotos.com/1011872/15252/v/600/depositphotos_152522886-stock-video-mountain-view-in-antarctica.jpg',
+    image: '../images/antarctica.jpg',
     title: 'Antarctica',
     description: 'Fourth page',
     numb: 4,
     coords: {lat: -79.363, lng: 171.044}
   },
   {
-    image: 'https://c1.staticflickr.com/1/951/27134366667_f5ab585600_b.jpg',
+    image: '../images/russia.jpg',
     title: 'Russia',
     description: 'Fifth page',
     numb: 5,
     coords: {lat: 66.363, lng: 111.044}
   }
 ];
+var numberOfData = data.length;
 // HTML mustache using the mustache to be able to manipulate the slider's html elements.
 mustacheRender();
 
@@ -57,7 +58,7 @@ function mustacheRender() {
   Mustache.parse(templateItem);
   var listItems = '';
 
-  for(var i = 0; i < data.length; i++){
+  for (var i = 0; i < numberOfData; i++) {
     listItems += Mustache.render(templateItem, data[i]);
   }
 
@@ -87,7 +88,7 @@ function initMap() {
     center: initCoords
   });
 
-  for (var i=0; i < data.length;i++) {
+  for (var i=0; i < numberOfData; i++) {
     var marker = new google.maps.Marker({
         position: data[i]['coords'],
         map: map
@@ -132,8 +133,8 @@ function smoothZoom (map, zoom, callback) {
   var startingZoom = map.getZoom();
   var steps = Math.abs(startingZoom - zoom);
 
-  if(!steps) {
-    if(callback) {
+  if (!steps) {
+    if (callback) {
       callback();
     }
     return;
@@ -142,9 +143,9 @@ function smoothZoom (map, zoom, callback) {
   var stepChange = - (startingZoom - zoom) / steps;
   var i = 0;
   var timer = window.setInterval(function(){
-    if(++i >= steps) {
+    if (++i >= steps) {
       window.clearInterval(timer);
-      if(callback) {
+      if (callback) {
         callback();
       }
     }
@@ -159,9 +160,9 @@ function smoothPan (map, coords, callback) {
   var panStep = {lat: (coords.lat() - mapCenter.lat()) / steps, lng: (coords.lng() - mapCenter.lng()) / steps};
   var i = 0;
   var timer = window.setInterval(function(){
-    if(++i >= steps) {
+    if (++i >= steps) {
       window.clearInterval(timer);
-      if(callback) callback();
+      if (callback) callback();
     }
     map.panTo({lat: mapCenter.lat() + panStep.lat * i, lng: mapCenter.lng() + panStep.lng * i});
   }, 1000/30);
