@@ -35,6 +35,7 @@ var data = [
     coords: {lat: -27.363, lng: 111.044}
   }
 ];
+var numberOfData = data.length;
 // HTML mustache using the mustache to be able to manipulate the slider's html elements.
 mustacheRender();
 
@@ -42,7 +43,6 @@ var elem = document.querySelector('.carousel');
 var nextButton = document.querySelector('.button-next');
 var previousButton = document.querySelector('.button-previous');
 var progressBar = document.querySelector('.progress-bar');
-var numberOfData = data.length;
 var flkty = new Flickity(elem, {
   cellAlign: 'left',
   contain: true,
