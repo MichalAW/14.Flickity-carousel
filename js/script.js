@@ -35,6 +35,7 @@ var data = [
     coords: {lat: 66.363, lng: 111.044}
   }
 ];
+var numberOfData = data.length;
 // HTML mustache using the mustache to be able to manipulate the slider's html elements.
 mustacheRender();
 
@@ -57,7 +58,7 @@ function mustacheRender() {
   Mustache.parse(templateItem);
   var listItems = '';
 
-  for(var i = 0; i < data.length; i++){
+  for (var i = 0; i < numberOfData; i++) {
     listItems += Mustache.render(templateItem, data[i]);
   }
 
@@ -87,7 +88,7 @@ function initMap() {
     center: initCoords
   });
 
-  for (var i=0; i < data.length;i++) {
+  for (var i=0; i < numberOfData;i++) {
     var marker = new google.maps.Marker({
         position: data[i]['coords'],
         map: map
@@ -132,8 +133,8 @@ function smoothZoom (map, zoom, callback) {
   var startingZoom = map.getZoom();
   var steps = Math.abs(startingZoom - zoom);
 
-  if(!steps) {
-    if(callback) {
+  if (!steps) {
+    if (callback) {
       callback();
     }
     return;
@@ -142,9 +143,9 @@ function smoothZoom (map, zoom, callback) {
   var stepChange = - (startingZoom - zoom) / steps;
   var i = 0;
   var timer = window.setInterval(function(){
-    if(++i >= steps) {
+    if (++i >= steps) {
       window.clearInterval(timer);
-      if(callback) {
+      if (callback) {
         callback();
       }
     }
@@ -159,9 +160,9 @@ function smoothPan (map, coords, callback) {
   var panStep = {lat: (coords.lat() - mapCenter.lat()) / steps, lng: (coords.lng() - mapCenter.lng()) / steps};
   var i = 0;
   var timer = window.setInterval(function(){
-    if(++i >= steps) {
+    if (++i >= steps) {
       window.clearInterval(timer);
-      if(callback) callback();
+      if (callback) callback();
     }
     map.panTo({lat: mapCenter.lat() + panStep.lat * i, lng: mapCenter.lng() + panStep.lng * i});
   }, 1000/30);
