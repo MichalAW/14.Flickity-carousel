@@ -134,7 +134,7 @@ function smoothZoom (map, zoom, callback) {
   var steps = Math.abs(startingZoom - zoom);
 
   if (!steps) {
-    if(callback) {
+    if (callback) {
       callback();
     }
     return;
