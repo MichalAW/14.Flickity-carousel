@@ -75,7 +75,7 @@ function flktySlider() {
     flkty.previous();
   });
 
-  flkty.on( 'scroll', function( progress ) {
+  flkty.on('scroll', function( progress ) {
     progress = Math.max( 0, Math.min( 1, progress ) );
     progressBar.style.width = progress * 100 + '%';
   });
@@ -88,7 +88,7 @@ function initMap() {
     center: initCoords
   });
 
-  for (var i=0; i < numberOfData; i++) {
+  for (var i = 0; i < numberOfData; i++) {
     var marker = new google.maps.Marker({
         position: data[i]['coords'],
         map: map
@@ -112,7 +112,7 @@ function initMap() {
     smoothPanAndZoom(map, 7, initCoords);
   });
 
-  flkty.on( 'change', function(index) {
+  flkty.on('change', function(index) {
     smoothPanAndZoom(map, 3, data[index].coords);
   });
 } 
@@ -165,7 +165,7 @@ function smoothPan (map, coords, callback) {
       if (callback) callback();
     }
     map.panTo({lat: mapCenter.lat() + panStep.lat * i, lng: mapCenter.lng() + panStep.lng * i});
-  }, 1000/30);
+  }, 33);
 };
 
 (function(){
