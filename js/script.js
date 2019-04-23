@@ -1,34 +1,34 @@
 var data = [
   {
-    image:  '../images/china.jpg',
+    image:  './images/china.jpg',
     title: 'China',
     description: 'First page',
     numb: 1,
     coords: {lat: 40.363, lng: 88.044}
   },
   {
-    image: '../images/sudan.jpg',
+    image: './images/sudan.jpg',
     title: 'Sudan',
     description: 'Second page',
     numb: 2,
     coords: {lat: 13.363, lng: 26.044}
   },
   {
-    image: '../images/kanguru.jpg',
+    image: './images/kanguru.jpg',
     title: 'Australia',
     description: 'Third page',
     numb: 3,
     coords: {lat: -15.363, lng: 118.044}
   },
   {
-    image: '../images/antarctica.jpg',
+    image: './images/antarctica.jpg',
     title: 'Antarctica',
     description: 'Fourth page',
     numb: 4,
     coords: {lat: -79.363, lng: 171.044}
   },
   {
-    image: '../images/russia.jpg',
+    image: './images/russia.jpg',
     title: 'Russia',
     description: 'Fifth page',
     numb: 5,
