@@ -50,7 +50,7 @@ var flkty = new Flickity(elem, {
   pageDots: false,
   hash: true,
 });
-
+// add mustache for rendering per item
 function mustacheRender() {
   var templateList = document.getElementById('template-slider').innerHTML;
   var templateItem = document.getElementById('template-slider-item').innerHTML;
